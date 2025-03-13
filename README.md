@@ -26,7 +26,7 @@
 
 1. **Clone the Repository**  
    Open your terminal and run:  
-   `git clone https://github.com/<your-username>/Interview-Analyzer.git`  
+   `git clone https://github.com/AzharAli5/Interview-Analyzer.git`  
    Then, navigate into the project directory:  
    `cd Interview-Analyzer`
 
