@@ -8,7 +8,6 @@
 
 - **Job Description Generation**: Automatically creates structured, compelling job descriptions based on user-provided details.
 - **Interview Questions Creation**: Generates role-specific, insightful interview questions.
-- **Transcript Simulation**: Produces realistic interview transcripts simulating actual interviews.
 - **Detailed Analysis**: Provides in-depth analysis including scores and conclusions based on the generated content.
 - **Modern UI**: Clean, white-themed interface with mandatory field validation and expandable sections for detailed outputs.
 - **Unicode Support**: Ensures robust file handling with UTF-8 encoding, supporting all Unicode characters.
