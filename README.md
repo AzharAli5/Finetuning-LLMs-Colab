@@ -56,13 +56,3 @@ Launch the Streamlit app with the following command:
 `streamlit run app.py`  
 This will open the application in your default web browser.
 
----
-
-## Project Structure
-
-Interview-Analyzer/ 
-├── analyzer.py # Backend functions: job description, questions, transcript, and analysis generation. 
-├── app.py # Streamlit frontend providing the user interface. 
-├── requirements.txt # List of required Python packages. 
-├── .env # Environment file for API keys (to be created manually). 
-└── README.md # This file.
