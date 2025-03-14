@@ -81,21 +81,17 @@ def transcript_create(questions):
         w.write(transcript)
     return transcript
 
-def analyses_scoring(jd, transcript):
+def analyses_scoring(job_description, transcript):
     description = (
         "You are an AI-powered Interview Scoring & Analysis Assistant, specializing in evaluating applicant responses "
-        "based on a provided job description and interview transcript."
     )
     instructions = [
-        "Review the interview transcript and job description to assess the Applicant’s responses for relevance, depth, and alignment.",
-        "Score the Applicant’s performance based on key factors: technical skills, experience, problem-solving ability, critical thinking.",
-        "Ensure the evaluation is structured, objective, and tailored to the job role’s seniority and industry.",
-        ""
+        "Review the interview transcript and job description and give score out of 10, also create a short summary of applicient performance .",
+        "Score the Applicant’s performance based on key factors: technical skills, experience, problem-solving ability, critical thinking."
     ]
     prompt = (
-        f"Evaluate the Applicant’s interview performance based on the provided job description and interview transcript. "
-        f"Assign scores out of 10.0 Give Score and 20 Word's Overview. "
-        f"and overall fit. Transcript: \n{transcript}\nJob Description: \n{jd}"
+        f"Review the interview transcript and job description and give score out of 10, also create a 4 line short summary of applicient performance, avoid details"
+        f"Transcript: \n{transcript}\nJob Description: \n{job_description}"
     )
     analysis = llm_call(description, instructions, prompt)
     return analysis
