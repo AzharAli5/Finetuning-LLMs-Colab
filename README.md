@@ -1,5 +1,5 @@
 <section id="project-header">
-    <h1>📄 Resume Screening with Llama-3-1B</h1>
+    <h1>📄 Finetuning Llama-3-1B on Resume Dataset</h1>
     <div class="badges">
         <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
         <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="Python Version">
