@@ -73,19 +73,4 @@ outputs = model.generate(inputs, max_new_tokens=256)</code></pre>
 ├── train.py
 └── requirements.txt</pre>
 </section>
-
-<section id="license">
-    <h2>📜 License</h2>
-    <p>MIT License - See <a href="#license">LICENSE</a> file</p>
-</section>
-
-<section id="contributing">
-    <h2>🤝 Contributing</h2>
-    <ol>
-        <li>Fork the repository</li>
-        <li>Create your feature branch</li>
-        <li>Commit changes</li>
-        <li>Push to branch</li>
-        <li>Open Pull Request</li>
-    </ol>
 </section>
