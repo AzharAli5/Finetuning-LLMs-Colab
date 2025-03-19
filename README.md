@@ -14,7 +14,7 @@
     </p>
     <ul>
         <li><strong>Columns:</strong> Role, Resume, Decision, Reason_for_decision, Job_Description</li>
-        <li><strong>Entries:</strong> 500+ annotated resumes</li>
+        <li><strong>Entries:</strong> 10k+ annotated resumes</li>
     </ul>
 </section>
 
