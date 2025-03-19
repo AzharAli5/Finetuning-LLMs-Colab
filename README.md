@@ -1,57 +1,91 @@
-# Interview Analyzer
+<section id="project-header">
+    <h1>📄 Resume Screening with Llama-3-1B</h1>
+    <div class="badges">
+        <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
+        <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="Python Version">
+    </div>
+</section>
 
-**Interview Analyzer** is a Streamlit-based application that automates the creation of professional job descriptions, interview questions, interview transcripts, and detailed interview performance analysis using AI. Designed for recruiters and HR professionals, this tool streamlines the interview preparation and evaluation process.
+<section id="dataset">
+    <h2>📁 Dataset</h2>
+    <p>
+        Using the <a href="https://huggingface.co/datasets/AzharAli05/Resume-Screening-Dataset" target="_blank">
+        Resume Screening Dataset</a> from Hugging Face
+    </p>
+    <ul>
+        <li><strong>Columns:</strong> Role, Resume, Decision, Reason_for_decision, Job_Description</li>
+        <li><strong>Entries:</strong> 500+ annotated resumes</li>
+    </ul>
+</section>
 
----
+<section id="features">
+    <h2>🚀 Features</h2>
+    <ul>
+        <li>4-bit QLoRA fine-tuning</li>
+        <li>VRAM &lt; 8GB requirements</li>
+        <li>Unsloth-optimized training</li>
+    </ul>
+</section>
 
-## Features
+<section id="installation">
+    <h2>⚙️ Installation</h2>
+    <pre><code>git clone https://github.com/yourusername/resume-screener-llama3.git
+cd resume-screener-llama3
+pip install -r requirements.txt</code></pre>
+</section>
 
-- **Job Description Generation**: Automatically creates structured, compelling job descriptions based on user-provided details.
-- **Interview Questions Creation**: Generates role-specific, insightful interview questions.
-- **Detailed Analysis**: Provides in-depth analysis including scores and conclusions based on the generated content.
-- **Modern UI**: Clean, white-themed interface with mandatory field validation and expandable sections for detailed outputs.
-- **Unicode Support**: Ensures robust file handling with UTF-8 encoding, supporting all Unicode characters.
+<section id="training">
+    <h2>🧠 Training Parameters</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Batch size</td><td>4</td></tr>
+            <tr><td>Learning rate</td><td>2e-5</td></tr>
+            <tr><td>Epochs</td><td>3</td></tr>
+        </tbody>
+    </table>
+</section>
 
----
+<section id="usage">
+    <h2>💻 Usage Example</h2>
+    <pre><code class="language-python">from unsloth import FastLanguageModel
 
-## Prerequisites
+model, tokenizer = FastLanguageModel.from_pretrained(
+    model_name = "./model",
+    max_seq_length = 2048,
+)
 
-- **Python 3.10+** (or your preferred Python version)
-- A valid API key for the AI service (to be set as `OPEN_ROUTER_API_KEY`)
+inputs = tokenizer.apply_chat_template([...], return_tensors="pt")
+outputs = model.generate(inputs, max_new_tokens=256)</code></pre>
+</section>
 
----
+<section id="structure">
+    <h2>📂 Repository Structure</h2>
+    <pre>
+.
+├── data/
+├── outputs/
+├── train.py
+└── requirements.txt</pre>
+</section>
 
-## Installation
+<section id="license">
+    <h2>📜 License</h2>
+    <p>MIT License - See <a href="#license">LICENSE</a> file</p>
+</section>
 
-1. **Clone the Repository**  
-   Open your terminal and run:  
-   `git clone https://github.com/AzharAli5/Interview-Analyzer.git`  
-   Then, navigate into the project directory:  
-   `cd Interview-Analyzer`
-
-2. **Create a Virtual Environment**  
-   For **Windows**:  
-   `python -m venv venv`  
-   `venv\Scripts\activate`  
-   For **macOS/Linux**:  
-   `python3 -m venv venv`  
-   `source venv/bin/activate`
-
-3. **Install Dependencies**  
-   Install the required packages using:  
-   `pip install -r requirements.txt`  
-   *(Ensure your `requirements.txt` includes packages such as streamlit, python-dotenv, and the appropriate AI package.)*
-
-4. **Configure the API Key**  
-   Create a file named `.env` in the root directory and add your API key:  
-   `OPEN_ROUTER_API_KEY=your_api_key_here`  
-   Replace `your_api_key_here` with your actual API key.
-
----
-
-## Running the Application
-
-Launch the Streamlit app with the following command:  
-`streamlit run app.py`  
-This will open the application in your default web browser.
-
+<section id="contributing">
+    <h2>🤝 Contributing</h2>
+    <ol>
+        <li>Fork the repository</li>
+        <li>Create your feature branch</li>
+        <li>Commit changes</li>
+        <li>Push to branch</li>
+        <li>Open Pull Request</li>
+    </ol>
+</section>
