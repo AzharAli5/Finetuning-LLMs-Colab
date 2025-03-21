@@ -29,7 +29,7 @@
 
 <section id="installation">
     <h2>⚙️ Installation</h2>
-    <pre><code>git clone https://github.com/M-Azhar5/resume-screener-llama3.git
+    <pre><code>git clone https://github.com/MdAzhar5/Finetuning-LLMs-Colab.git
 cd resume-screener-llama3
 pip install -r requirements.txt</code></pre>
 </section>
